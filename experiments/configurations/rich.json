@@ -1,0 +1,1 @@
+{ "name": "rich", "packs": ["basic", "diamond-quest", "voyager-imported"], "includeLearned": false, "promotion": { "minSuccesses": 2 }, "autoCommit": false }

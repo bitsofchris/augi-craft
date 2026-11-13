@@ -1,0 +1,1 @@
+{ "name": "basic", "packs": ["basic"], "includeLearned": false, "promotion": { "minSuccesses": 2 }, "autoCommit": false }

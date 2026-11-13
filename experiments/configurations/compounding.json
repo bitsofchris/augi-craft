@@ -1,0 +1,1 @@
+{ "name": "compounding", "packs": ["basic", "diamond-quest"], "includeLearned": true, "promotion": { "minSuccesses": 2 }, "autoCommit": false }

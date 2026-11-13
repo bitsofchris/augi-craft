@@ -1,0 +1,33 @@
+{
+  "$comment": "Copy to $AUGI_HOME/crew.json and edit. Workers are the bots; `player` names the person a role serves; voice.players are the people allowed to speak on the voice page. Names starting with a dot are Bedrock (Xbox/phone) players joining through Geyser. `model` is whatever `codex --model` accepts on your account; gpt-6.1-sol is only an example.",
+  "status": "v2-programs",
+  "model": "gpt-6.1-sol",
+  "reasoningEffort": "low",
+  "world": "default",
+  "connection": {
+    "host": "127.0.0.1",
+    "port": 25565,
+    "auth": "offline",
+    "version": "26.3"
+  },
+  "commonInstructions": "shared.md",
+  "workers": [
+    { "role": "gatherer", "username": "Gatherer", "instructions": "gatherer.md" },
+    { "role": "hunter", "username": "Hunter", "instructions": "hunter.md" },
+    { "role": "builder", "username": "Builder", "instructions": "builder.md" },
+    { "role": "guard", "username": "Sentry", "instructions": "guard.md" },
+    { "role": "bodyguard", "username": "Guard", "instructions": "bodyguard.md", "player": "Player1" },
+    { "role": "diamond", "username": "DiamondMiner", "instructions": "diamond.md", "player": "Player1" },
+    { "role": "agent", "username": "Agent1", "instructions": "agent.md" },
+    { "role": "agent", "username": "Agent2", "instructions": "agent.md" },
+    { "role": "agent", "username": "Agent3", "instructions": "agent.md" },
+    { "role": "agent", "username": "Agent4", "instructions": "agent.md" }
+  ],
+  "people": ["Player1"],
+  "voice": {
+    "relay": "AugiEars",
+    "port": 8443,
+    "players": ["Player1"],
+    "note": "Optional hold-to-talk service (scripts/start-voice.sh, docs/VOICE.md). The first player is the page default."
+  }
+}

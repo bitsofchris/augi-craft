@@ -1,0 +1,30 @@
+node_modules/
+*.log
+npm-debug.log*
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Instance data never lives in this repository (docs/INSTANCE.md). These
+# patterns are a safety net for anyone who points AUGI_HOME inside the clone.
+/instance/
+/server/
+/voice/
+/recordings/
+/local-server/
+/local-voice/
+/crew.json
+/augi.config.json
+knowledge/episodes/
+knowledge/worlds/
+knowledge/learned/evidence/
+knowledge/learned/deprecated/
+knowledge/.augi-write.lock
+knowledge/shlock*
+knowledge/TIMELINE.md
+*.wav
+*.mcpr
+
+# Claude Code local settings (holds your AUGI_HOME)
+.claude/settings.local.json

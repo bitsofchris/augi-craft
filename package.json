@@ -1,0 +1,39 @@
+{
+  "name": "augi-craft",
+  "version": "0.1.0",
+  "description": "Augi Minecraft: a Mineflayer agent runtime with a Git-backed, self-improving skill knowledge base, exposed over MCP.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "augi-mcp": "runtime/mcp/server.js"
+  },
+  "scripts": {
+    "mcp": "node runtime/mcp/server.js",
+    "test": "node --test --import ./test/helpers/env.js test/*.test.js",
+    "check:publish": "node scripts/check-publish.mjs",
+    "setup:26.3": "node node_modules/mineflayer/tools/install-minecraft-data-native.mjs",
+    "init": "node scripts/init-home.mjs",
+    "demo": "node scripts/demo-starter-tools.js",
+    "kb": "node scripts/kb.js",
+    "import:voyager": "node scripts/import-voyager.js",
+    "prepare": "node scripts/install-hooks.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "minecraft-data": "3.113.0",
+    "mineflayer": "github:hammermaps/Mineflayer#a4bcde52f8e9d1ff2bccd4935e3dcbaf12070853",
+    "mineflayer-collectblock": "^1.6.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "mineflayer-tool": "^1.2.0",
+    "vec3": "^0.2.0",
+    "yaml": "^2.9.1",
+    "zod": "^3.25.76"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitsofchris/augi-craft.git"
+  }
+}
