@@ -96,6 +96,10 @@ npm test               # no Minecraft needed
 npm run init           # makes ~/.augi-craft with a config and an example crew
 ```
 
+The pinned Mineflayer fork and three of its dependencies come from GitHub by
+commit, not from the npm registry. npm 12 refuses those by default
+(`EALLOWGIT`); the `.npmrc` here allows them for this project.
+
 `npm run init -- /some/other/path` puts the instance elsewhere; then
 `export AUGI_HOME=/some/other/path` in your shell (and in any MCP config that
 should use it). Edit `$AUGI_HOME/crew.json` when you run a crew (§4): your players' names

@@ -101,5 +101,6 @@ moves the lesson to `learned/validated/`. Commit with `kb_commit` (or `git`).
 | `not_connected` / ECONNREFUSED | Wrong port. The LAN port changes on each Open to LAN. |
 | Kicked: "Failed to verify username" | The server is online-mode. Use `online-mode=false` or `MC_AUTH=microsoft`. |
 | Version errors | Set `MC_VERSION=26.3` explicitly and run `npm run setup:26.3` after `npm ci`. |
+| `npm ci` fails with `EALLOWGIT` | npm 12 refusing the Git dependencies. The repo's `.npmrc` (`allow-git=all`) allows them; if it is missing or overridden, run `npm ci --allow-git=all`. |
 | `lib.gather_blocks` → `not_found` | No trees within 64 blocks. Move the bot (`lib.navigate_to` x/y/z) or move your spawn. |
 | Tool times out in the CLI but works in the demo | Raise `MCP_TOOL_TIMEOUT` (Claude Code) or `tool_timeout_sec` (Codex). |
